@@ -1,85 +1,79 @@
 # Gabriel | CV Website
 
-A modern, single-page CV website with a liquid glass navigation bar, smooth scroll animations and light/dark themes. Built with plain HTML, CSS and JavaScript. No frameworks, no build step, no dependencies.
+My personal CV as a website. It is a single page that gives recruiters and hiring managers what they need in under a minute: who I am, what I have done, what I can do, and how to reach me.
 
 <!-- Add a screenshot: save it as screenshot.png in this folder, then uncomment the line below -->
 <!-- ![Screenshot of the CV website](screenshot.png) -->
 
-## Features
+## What this project is for
 
-- **Liquid glass navigation:** a floating, frosted-glass nav with a glowing rim, a highlight that follows your cursor, and a selection bubble that stretches as it glides between sections
-- **Smooth animations:** the name rises in letter by letter on load, content fades up as you scroll, and a progress bar fills along the top of the screen
-- **Light and dark mode:** follows the visitor's system setting, with a toggle that remembers their choice
-- **Responsive:** the section links move to a floating bar at the bottom of the screen on phones
-- **Print-friendly:** "Print or save as PDF" produces a clean, ink-friendly CV
-- **Accessible:** skip link, keyboard focus styles, semantic HTML, and respect for the "reduce motion" and "reduce transparency" system settings
-- **Handy details:** live local-time chip, copy-email button, downloadable CV link
+A PDF CV is easy to send but easy to skip. This site is a link I can put in a job application, an email or a LinkedIn profile that shows the same information in a more memorable way, and that always stays up to date in one place.
 
-## Project structure
+It exists to:
+
+- **Introduce me quickly.** The top of the page answers the questions a recruiter asks first: what I do, where I am based, my current role and when I am available.
+- **Show my background clearly.** Experience, education and skills each have their own section, in the order employers look for them.
+- **Make the next step easy.** A Download CV button, an email link and a copy-email button are always one click away.
+- **Show that I can build things.** The site itself is a working example of my front-end skills, built by hand without frameworks or libraries.
+
+## Who it is for
+
+- **Recruiters and hiring managers** who want the key facts fast, on a phone or a laptop.
+- **Anyone I share the link with**, such as lecturers, referees or contacts who want to see my background.
+- **Me**, as a single place to keep my CV current and to practise web development.
+
+## What is on the page
+
+| Section | What it shows |
+| --- | --- |
+| **Hero** | My name, role, a short pitch, a download button, and four quick facts (current role, location, experience, availability) |
+| **About** | A short professional summary |
+| **Experience** | My work history, newest first, with achievements and tools used |
+| **Education** | Degrees and courses |
+| **Skills** | Core skills, tools and languages, with my strongest ones highlighted |
+| **Contact** | Email, social links and a downloadable CV |
+
+## Design
+
+The goal was a clean, modern look that stays out of the way of the content.
+
+- A floating glass-style navigation bar that follows you down the page and highlights the section you are in
+- Light and dark modes that follow the visitor's system setting
+- Smooth, subtle animations that respect the "reduce motion" setting
+- A layout that works from phone to desktop
+- A print layout, so "Print or save as PDF" produces a clean one-page-style CV
+
+## Built with
+
+Plain **HTML**, **CSS** and **JavaScript**. No frameworks, no build step and no dependencies. The only outside resource is the Geist font from Google Fonts, with a system font as a fallback.
+
+## Project files
 
 ```
 .
-├── index.html    # page structure, content and the small script
-├── style.css     # all styling, animation and theming
-├── cv.pdf        # your CV (add this yourself)
-└── photo.jpg     # optional portrait (add this yourself)
+├── index.html    # content and structure
+├── style.css     # design, animation and light/dark themes
+├── cv.pdf        # the downloadable CV
+└── photo.jpg     # optional portrait
 ```
 
-## Run it locally
+## Run it
 
-No install needed. Open `index.html` in a browser.
+Open `index.html` in any browser. No install is needed.
 
-For a local server instead:
+## Use it as a template
 
-```bash
-python3 -m http.server 8000
-```
+You are welcome to adapt this for your own CV. Every place to edit is marked with an `EDIT` comment in `index.html`: your name, intro, jobs, education, skills and contact details. Colours are set at the top of `style.css`, and changing `--accent` recolours the whole site.
 
-Then visit `http://localhost:8000`.
+## Publish it
 
-## Make it yours
-
-Every place to edit is marked with an `EDIT` comment in `index.html`. The main ones:
-
-1. **Name and role:** the `<h1>`, the role line, and the page `<title>`. Each letter of the name is its own `<span class="l" style="--i:N">`, so keep one per letter, with `N` counting up from 0.
-2. **Intro sentence:** replace the bracketed text. The highlighted words are the `.key` spans.
-3. **Quick facts:** the four tiles under the hero (currently, based in, experience, available).
-4. **About, Experience, Education, Skills:** replace the placeholder text. Copy a `<li class="entry">` block to add another job or course.
-5. **Contact:** your email (in both the link and the `data-copy` attribute), LinkedIn and GitHub links.
-6. **Files:** put `cv.pdf` next to `index.html`. For a photo, add `photo.jpg` and swap `<span>G</span>` for `<img src="photo.jpg" alt="Photo of Gabriel">`.
-7. **Structured data:** update the `application/ld+json` block near the top so search engines understand the page.
-
-### Colours and fonts
-
-All colours live in two blocks at the top of `style.css` (`:root` for light, `:root[data-theme="dark"]` for dark). Change `--accent` to recolour the whole site. The font is [Geist](https://fonts.google.com/specimen/Geist) from Google Fonts, with a system font fallback.
-
-## How the liquid glass works
-
-It is an imitation of Apple's liquid glass effect, built from standard browser features:
-
-| Language | What it does |
-| --- | --- |
-| **CSS** | `backdrop-filter` blurs and saturates what is behind the nav. A semi-transparent gradient tints it. Layered `box-shadow` values add the shine. A masked `::before` layer draws the rim, and a radial-gradient `::after` layer is the pointer highlight. The selection bubble moves with a spring-style `cubic-bezier` curve. |
-| **SVG** | An inline `<filter>` uses `feImage` and `feDisplacementMap` to bend the page behind the edges of the glass like a lens. It is applied with `backdrop-filter: url(#lg-wide)`. |
-| **JavaScript** | Detects Chromium to switch the lens effect on, passes the cursor position to CSS as `--mx` and `--my`, and briefly adds a `moving` class so the bubble stretches while it travels. |
-| **HTML** | A few class names (`glass`, `glass-wide`, `glass-round`) and the inline SVG filter. |
-
-Most of the visual work is CSS. JavaScript only handles decisions, like which section you are in and remembering your theme.
-
-## Browser support
-
-- **Chromium browsers (Chrome, Edge, Brave):** full effect, including the lens distortion at the glass edges.
-- **Safari and Firefox:** the nav falls back to frosted glass without the lens distortion. Everything else works the same.
-- **Reduced motion or reduced transparency:** animations are switched off, and the nav becomes solid.
-
-## Deploy with GitHub Pages
+The easiest way is GitHub Pages:
 
 1. Push these files to a GitHub repository.
 2. Go to **Settings > Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Choose the `main` branch and the `/ (root)` folder, then save.
-5. After a minute or two your site is live at `https://[your-username].github.io/[repository-name]/`.
+3. Set **Source** to **Deploy from a branch**, choose `main` and the `/ (root)` folder, then save.
+4. After a minute or two the site is live at `https://[your-username].github.io/[repository-name]/`.
 
 ## License
 
-Choose a license for your repository, such as [MIT](https://choosealicense.com/licenses/mit/), and add it as a `LICENSE` file. Replace this section with the name of the license you pick.
+Released under the [MIT License](LICENSE). You are free to use, copy and adapt the code, including for your own CV site, as long as the copyright notice stays with it. This covers the code only: the personal details, text and photo are mine, so please replace them with your own.
