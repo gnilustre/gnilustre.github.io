@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#fafafb">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- EDIT: use your full name and job title in the title and descriptions -->
+    <title>CV and Experience</title>
+    <meta name="description" content="Gabriel's online CV: experience, education, skills, and how to get in touch.">
+    <meta property="og:title" content="Gabriel | CV and Experience">
+    <meta property="og:description" content="Experience, education, skills, and contact details.">
+    <meta property="og:type" content="profile">
+
+    <!-- Picks the saved theme, or follows the system setting. Runs before the page paints, so there is no flash.
+         The "js" class lets the CSS hide things that will animate in, only when scripts are running. -->
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute("content", t === "dark" ? "#09090c" : "#fafafb");
+      })();
+    </script>
+
+    <!-- Font (optional: without internet the site falls back to the system font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EDIT: helps Google understand this page is a person's CV. Fill in your details. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gabriel",
+      "jobTitle": "Your job title",
+      "email": "mailto:you@example.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Your city" },
+      "sameAs": ["https://www.linkedin.com/in/your-profile", "https://github.com/your-profile"]
+    }
+    </script>
+  </head>
+  <body>
+
+    <!-- Lens effect for the glass nav (used only in Chromium browsers; others get the plain frosted glass) -->
+    <svg class="lg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <filter id="lg-wide" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+        <feImage href="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='none'%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id='l'%3E%3Cstop%20offset='0'%20stop-color='rgb(255,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='r'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(0,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='t'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,255,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='b'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,0,128)'/%3E%3C/linearGradient%3E%0A%3C/defs%3E%0A%3Crect%20width='100'%20height='100'%20fill='rgb(128,128,128)'/%3E%0A%3Crect%20width='100'%20height='38'%20fill='url(%23t)'/%3E%0A%3Crect%20y='62'%20width='100'%20height='38'%20fill='url(%23b)'/%3E%0A%3Crect%20width='7'%20height='100'%20fill='url(%23l)'/%3E%0A%3Crect%20x='93'%20width='7'%20height='100'%20fill='url(%23r)'/%3E%0A%3C/svg%3E" x="0" y="0" width="1" height="1" preserveAspectRatio="none" result="map"/>
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="0.07" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="lg-round" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+        <feImage href="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%20preserveAspectRatio='none'%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id='l'%3E%3Cstop%20offset='0'%20stop-color='rgb(255,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='r'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(0,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='t'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,255,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,128,128)'/%3E%3C/linearGradient%3E%0A%3ClinearGradient%20id='b'%20x1='0'%20y1='0'%20x2='0'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='rgb(128,128,128)'/%3E%3Cstop%20offset='1'%20stop-color='rgb(128,0,128)'/%3E%3C/linearGradient%3E%0A%3C/defs%3E%0A%3Crect%20width='100'%20height='100'%20fill='rgb(128,128,128)'/%3E%0A%3Crect%20width='100'%20height='30'%20fill='url(%23t)'/%3E%0A%3Crect%20y='70'%20width='100'%20height='30'%20fill='url(%23b)'/%3E%0A%3Crect%20width='30'%20height='100'%20fill='url(%23l)'/%3E%0A%3Crect%20x='70'%20width='30'%20height='100'%20fill='url(%23r)'/%3E%0A%3C/svg%3E" x="0" y="0" width="1" height="1" preserveAspectRatio="none" result="map"/>
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="0.34" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Thin bar along the very top of the screen that fills as you scroll -->
+    <div class="progress" aria-hidden="true"><span class="progress-fill"></span></div>
+
+    <!-- ============ FLOATING NAV ============ -->
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="logo glass glass-round" href="#top" aria-label="Gabriel, back to top">G</a>
+
+        <nav class="section-nav glass glass-wide" aria-label="Sections">
+          <ul class="nav-list">
+            <li class="nav-thumb" aria-hidden="true"></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="theme-toggle glass glass-round" type="button" aria-label="Switch to dark mode">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <g class="sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g>
+              <path class="moon" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+            </svg>
+          </button>
+          <!-- EDIT: put your CV file next to index.html and name it cv.pdf -->
+          <a class="btn btn-primary btn-small" href="cv.pdf" download>
+            <span><span class="hide-xs">Download </span>CV</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+
+          <div class="hero-head">
+            <div class="chips">
+              <p class="chip"><span class="dot" aria-hidden="true"></span>Open to new roles</p>
+              <!-- Filled in by the script: the current time where you are -->
+              <p class="chip chip-clock" hidden><span class="clock-label">Napier</span> <span class="clock" data-tz="Pacific/Auckland"></span></p>
+            </div>
+
+            <!-- EDIT: your full name. Each letter is its own span so they can rise in one by one:
+                 keep one <span class="l" style="--i:N"> per letter, with N counting up from 0. -->
+            <h1 aria-label="Gabriel">
+              <span aria-hidden="true">
+                <span class="l" style="--i:0">G</span><span class="l" style="--i:1">a</span><span class="l" style="--i:2">b</span><span class="l" style="--i:3">r</span><span class="l" style="--i:4">i</span><span class="l" style="--i:5">e</span><span class="l" style="--i:6">l</span>
+              </span>
+            </h1>
+            <p class="role">Intern based in Napier</p>
+          </div>
+
+          <div class="hero-text">
+            <!-- EDIT: two sentences. The highlighted words are what you want a recruiter to remember. -->
+            <p class="lede">
+              I <span class="key">[what you do]</span> for <span class="key">[who you help]</span>.
+              Over <span class="key">[X years]</span> I have <span class="key">[your best result, with a number]</span>,
+              and I'm now looking for <span class="key">[the kind of role you want]</span>.
+            </p>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="cv.pdf" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+                Download CV (PDF)
+              </a>
+              <!-- EDIT: your real email address -->
+              <a class="btn btn-outline" href="mailto:you@example.com">Email me</a>
+            </div>
+          </div>
+
+          <!-- EDIT: to use a real photo, replace <span>G</span> with:
+               <img src="photo.jpg" alt="Photo of Gabriel"> -->
+          <div class="portrait" role="img" aria-label="Photo of Gabriel goes here">
+            <span>G</span>
+          </div>
+
+          <!-- The 10-second summary a recruiter looks for first -->
+          <dl class="glance">
+            <div class="t-ink"><dt>Currently</dt><dd>Intern at ABB</dd></div>
+            <div><dt>Based in</dt><dd>Napier, New Zealand</dd></div>
+            <div><dt>Experience</dt><dd>2 Months</dd></div>
+            <div class="t-accent"><dt>Available</dt><dd>From Nov 20</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section">
+        <div class="wrap">
+          <h2 data-reveal>About</h2>
+          <div class="prose">
+            <p data-reveal>
+              Write a short professional summary here, in three or four sentences. Say what
+              you do, what you are best at, and what kind of team or problem you want next.
+            </p>
+            <p data-reveal>
+              Employers hire people they like and trust, so be yourself. One line about what you
+              enjoy outside work can help them remember you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience" class="section">
+        <div class="wrap">
+          <h2 data-reveal>Experience</h2>
+          <!-- EDIT: newest job first. Copy one <li> block for each job. -->
+          <ol class="entries cards">
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2023">2023</time> to Present</p>
+              <h3>Job title</h3>
+              <p class="entry-org">Company name, City</p>
+              <ul class="bullets">
+                <li>One achievement with a number, for example "Cut report time by 40%".</li>
+                <li>One responsibility that shows what you were trusted with.</li>
+                <li>One way you helped the team, such as mentoring or improving a process.</li>
+              </ul>
+              <ul class="tags" aria-label="Tools used">
+                <li>Tool one</li><li>Tool two</li><li>Tool three</li>
+              </ul>
+            </li>
+
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2021">2021</time> to <time datetime="2023">2023</time></p>
+              <h3>Job title</h3>
+              <p class="entry-org">Company name, City</p>
+              <ul class="bullets">
+                <li>One achievement with a number.</li>
+                <li>One responsibility.</li>
+              </ul>
+              <ul class="tags" aria-label="Tools used">
+                <li>Tool one</li><li>Tool two</li>
+              </ul>
+            </li>
+
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2019">2019</time> to <time datetime="2021">2021</time></p>
+              <h3>Job title</h3>
+              <p class="entry-org">Company name, City</p>
+              <ul class="bullets">
+                <li>One achievement with a number.</li>
+                <li>One responsibility.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section">
+        <div class="wrap">
+          <h2 data-reveal>Education</h2>
+          <!-- EDIT: degrees first, then certifications and courses -->
+          <ol class="entries rows">
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2021">2021</time> to <time datetime="2022">2022</time></p>
+              <div class="entry-body">
+                <h3>Senior High School - STEM</h3>
+                <p class="entry-org">Batangas State University, Batangas</p>
+              </div>
+            </li>
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2022">2022</time> to <time datetime="2023">2023</time></p>
+              <div class="entry-body">
+                <h3>Bachelor of Science in Computer Engineering</h3>
+                <p class="entry-org">Batangas State University, Batangas</p>
+                <p class="entry-note">First year only</p>
+              </div>
+            </li>
+            <li class="entry" data-reveal>
+              <p class="entry-when"><time datetime="2024">2024</time> to <time datetime="2026">2026</time></p>
+              <div class="entry-body">
+                <h3>Bachelor of Computing Systems</h3>
+                <p class="entry-org">Eastern Institute of Technology, Napier</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section">
+        <div class="wrap">
+          <h2 data-reveal>Skills</h2>
+          <p class="skill-legend" data-reveal><span class="strong-sample">Filled</span> skills are the ones I use every day.</p>
+          <!-- EDIT: keep each group to the 5 to 8 things you are strongest at.
+               Add class="strong" to your best ones. -->
+          <div class="skill-rows">
+            <div class="skill-row" data-reveal>
+              <h3>Core skills</h3>
+              <ul class="skill-list">
+                <li class="strong">Problem Solving</li>
+                <li class="strong">Skill two</li>
+                <li>Skill three</li>
+                <li>Skill four</li>
+                <li>Skill five</li>
+              </ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <h3>Tools</h3>
+              <ul class="skill-list">
+                <li class="strong">Tool one</li>
+                <li>Tool two</li>
+                <li>Tool three</li>
+                <li>Tool four</li>
+              </ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <h3>Languages</h3>
+              <ul class="skill-list">
+                <li class="strong">Filipino (native)</li>
+                <li class="strong">English (fluent)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section contact">
+        <div class="wrap">
+          <div class="contact-card" data-reveal>
+            <h2>Let's talk</h2>
+            <p class="contact-text">Send me an email or download my CV. I'll reply within three days.</p>
+
+            <div class="contact-actions">
+              <!-- EDIT: your real email address (also update data-copy below) -->
+              <a class="email-link" href="mailto:gnilustre@gmail.com">gnilustre@gmail.com</a>
+              <button class="btn btn-ghost copy-btn" type="button" data-copy="gnilustre@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+                <span class="copy-label">Copy email</span>
+              </button>
+            </div>
+            <span class="sr-only" role="status" aria-live="polite" id="copy-status"></span>
+
+            <ul class="contact-links">
+              <!-- EDIT: replace # with your real links, and add a phone number if you want -->
+              <li><a href="https://linkedin.com/in/gnilustre18" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="cv.pdf" download>CV (PDF)</a></li>
+            </ul>
+            <p class="contact-note">References available on request.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>&copy; 2026 Gabriel. Last updated October 2026.</p>
+        <button class="print-btn" type="button">Print or save as PDF</button>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* Chromium can bend the page behind the glass nav like a lens; other browsers keep the frosted glass */
+        var uad = navigator.userAgentData;
+        if (uad && uad.brands && uad.brands.some(function (b) { return /Chromium/.test(b.brand); })) {
+          root.classList.add("lg-refract");
+        }
+
+        /* The glass catches a soft highlight where your pointer is */
+        document.querySelectorAll(".glass").forEach(function (g) {
+          g.addEventListener("pointermove", function (e) {
+            var r = g.getBoundingClientRect();
+            g.style.setProperty("--mx", (e.clientX - r.left) + "px");
+            g.style.setProperty("--my", (e.clientY - r.top) + "px");
+          });
+        });
+
+        /* ----- Light / dark switch ----- */
+        var themeBtn = document.querySelector(".theme-toggle");
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        function applyTheme(t, save) {
+          root.setAttribute("data-theme", t);
+          themeBtn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+          if (themeMeta) themeMeta.setAttribute("content", t === "dark" ? "#09090c" : "#fafafb");
+          if (save) { try { localStorage.setItem("theme", t); } catch (e) {} }
+        }
+        applyTheme(root.getAttribute("data-theme"), false);
+        themeBtn.addEventListener("click", function () {
+          applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+        });
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+          var saved = null;
+          try { saved = localStorage.getItem("theme"); } catch (err) {}
+          if (!saved) applyTheme(e.matches ? "dark" : "light", false);
+        });
+
+        /* ----- Reveal: things ease in once as they come into view ----- */
+        var items = document.querySelectorAll("[data-reveal]");
+        if (reduce || !("IntersectionObserver" in window)) {
+          items.forEach(function (el) { el.classList.add("in"); });
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+          items.forEach(function (el) { io.observe(el); });
+        }
+
+        /* ----- Local time chip (hides itself if the browser can't do it) ----- */
+        var clock = document.querySelector(".clock");
+        var chip = document.querySelector(".chip-clock");
+        function tick() {
+          try {
+            clock.textContent = new Intl.DateTimeFormat("en-NZ", {
+              hour: "numeric", minute: "2-digit", timeZone: clock.getAttribute("data-tz")
+            }).format(new Date());
+            chip.hidden = false;
+          } catch (e) { chip.hidden = true; }
+        }
+        tick();
+        setInterval(tick, 15000);
+
+        /* ----- Scroll bar, active section, sliding highlight in the nav ----- */
+        var list = document.querySelector(".nav-list");
+        var links = list.querySelectorAll("a");
+        var map = {}, sections = [];
+        links.forEach(function (a) {
+          var el = document.getElementById(a.getAttribute("href").slice(1));
+          if (el) { map[el.id] = a; sections.push(el); }
+        });
+        var current = null, ticking = false;
+
+        var squashTimer;
+        function placeThumb(animate) {
+          var a = current && map[current];
+          if (!a) { list.classList.remove("has-thumb"); return; }
+          list.style.setProperty("--x", a.offsetLeft + "px");
+          list.style.setProperty("--w", a.offsetWidth + "px");
+          list.classList.add("has-thumb");
+          /* The bubble stretches while it travels, then settles, like a drop of liquid */
+          if (animate && !reduce) {
+            list.classList.add("moving");
+            clearTimeout(squashTimer);
+            squashTimer = setTimeout(function () { list.classList.remove("moving"); }, 260);
+          }
+        }
+
+        function setCurrent(id) {
+          if (id === current) return;
+          current = id;
+          links.forEach(function (a) { a.removeAttribute("aria-current"); });
+          var a = id && map[id];
+          if (a) {
+            a.setAttribute("aria-current", "true");
+            /* On phones the nav can scroll sideways: keep the active link in view */
+            if (list.scrollWidth > list.clientWidth) {
+              list.scrollTo({
+                left: a.offsetLeft - (list.clientWidth - a.offsetWidth) / 2,
+                behavior: reduce ? "auto" : "smooth"
+              });
+            }
+          }
+          placeThumb(true);
+        }
+
+        function update() {
+          ticking = false;
+          var max = root.scrollHeight - window.innerHeight;
+          var y = window.scrollY;
+          var p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+          root.style.setProperty("--progress", p.toFixed(4));
+
+          var line = window.innerHeight * 0.4;
+          var id = null;
+          sections.forEach(function (s) {
+            if (s.getBoundingClientRect().top <= line) id = s.id;
+          });
+          if (max > 0 && y >= max - 4) id = sections[sections.length - 1].id;
+          setCurrent(id);
+        }
+        function onScroll() {
+          if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", function () { placeThumb(false); onScroll(); });
+        update();
+
+        /* ----- Copy email ----- */
+        var copyBtn = document.querySelector(".copy-btn");
+        var copyLabel = copyBtn.querySelector(".copy-label");
+        var status = document.getElementById("copy-status");
+        var timer;
+        function done(ok) {
+          copyLabel.textContent = ok ? "Copied" : "Press Ctrl+C to copy";
+          status.textContent = ok ? "Email address copied to clipboard" : "";
+          clearTimeout(timer);
+          timer = setTimeout(function () { copyLabel.textContent = "Copy email"; status.textContent = ""; }, 2200);
+        }
+        copyBtn.addEventListener("click", function () {
+          var text = copyBtn.getAttribute("data-copy");
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+          } else {
+            var ta = document.createElement("textarea");
+            ta.value = text; ta.setAttribute("readonly", "");
+            ta.style.position = "fixed"; ta.style.opacity = "0";
+            document.body.appendChild(ta); ta.select();
+            var ok = false;
+            try { ok = document.execCommand("copy"); } catch (e) {}
+            document.body.removeChild(ta);
+            done(ok);
+          }
+        });
+
+        /* ----- Print / save as PDF ----- */
+        document.querySelector(".print-btn").addEventListener("click", function () { window.print(); });
+      })();
+    </script>
+
+  </body>
+</html>
